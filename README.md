@@ -20,17 +20,21 @@
 
 ## Установка
 
-Скопируйте папку `la-profe/` из этого репозитория в каталог скиллов Claude Code — `~/.claude/skills/`.
+Скилл = папка `la-profe/` (файл `SKILL.md` + `references/`), которая кладётся в каталог скиллов Claude Code `~/.claude/skills/`.
 
-Самый простой способ — **дайте Claude Code ссылку на этот репозиторий и попросите установить скилл**. Либо вручную:
+**Самый простой способ — дайте Claude Code ссылку на этот репозиторий и попросите установить скилл.** Например, скажите ему:
+
+> Установи мне скилл по этой ссылке: https://github.com/SoKseniya/la-profe — склонируй репозиторий и скопируй папку `la-profe` в `~/.claude/skills/`.
+
+**Вручную** (то же самое, копипастой в терминал):
 
 ```bash
-git clone <URL-этого-репозитория> /tmp/la-profe-public
+git clone https://github.com/SoKseniya/la-profe.git /tmp/la-profe-public
 mkdir -p ~/.claude/skills
 cp -r /tmp/la-profe-public/la-profe ~/.claude/skills/la-profe
 ```
 
-После этого скилл доступен в Claude Code. Проверить — спросите Claude Code: «есть ли у меня скилл la-profe?».
+После этого перезапустите Claude Code (или начните новую сессию) — скилл подхватится. Проверить: спросите Claude Code «есть ли у меня скилл la-profe?».
 
 ## Использование
 
